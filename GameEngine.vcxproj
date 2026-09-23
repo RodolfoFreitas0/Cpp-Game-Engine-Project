@@ -72,11 +72,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Users\Rodolfo Freitas\source\repos\GameEngine\libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Rodolfo Freitas\source\repos\GameEngine\libraries\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\Rodolfo Freitas\source\repos\GameEngine\libraries\lib\GLFW;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Users\Rodolfo Freitas\source\repos\GameEngine\libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Rodolfo Freitas\source\repos\GameEngine\libraries\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\Rodolfo Freitas\source\repos\GameEngine\libraries\lib\GLFW;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -149,8 +149,22 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gl.c" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\stb_impl.cpp" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="libraries\include\shaderClass\shaderClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\shader.frag" />
+    <None Include="shaders\shader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libraries\include\stb_image\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\awesomeface.png" />
+    <Image Include="textures\container.jpg" />
+    <Image Include="textures\wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
